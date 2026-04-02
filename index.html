@@ -802,10 +802,10 @@ async function makePDF(){
     doc.setFont('helvetica','bold');doc.setFontSize(9);doc.setTextColor(...MT);
     doc.text('HOW TO USE THESE PROMPTS',M,y);y+=12;
     doc.setFont('helvetica','normal');doc.setFontSize(9);doc.setTextColor(...LT);
-    const howLines=doc.splitTextToSize('1. Choose the prompt that feels most relevant to where you are right now.
+    const howLines=doc.splitTextToSize(`1. Choose the prompt that feels most relevant to where you are right now.
 2. Replace the text in square brackets [ ] with your real context — your group, your topic, a specific challenge.
 3. Paste the full prompt into any AI platform (ChatGPT, Claude, Gemini, Copilot, or similar).
-4. Engage with the response and keep the conversation going — the more real detail you add, the more useful the answer.',TW);
+4. Engage with the response and keep the conversation going — the more real detail you add, the more useful the answer.`,TW);
     doc.text(howLines,M,y);y+=howLines.length*11+20;
 
     // Footer
